@@ -21,12 +21,20 @@ namespace RS1beta
             player = new Player();
             currentDay = Day.Monday;
 
+            Console.WriteLine("Simulator");
+            WritePlayerStatus();
+
             while (player.NotDead())
             {
                 var input = Console.ReadLine();
-                if (input == "exit")
+                switch (input)
                 {
-                    return 0;
+                    case "exit":
+                        return 0;
+
+                    case "p":
+                        WritePlayerStatus();
+                        break;
                 }
 
                 Advance();
@@ -50,6 +58,14 @@ namespace RS1beta
             // output new day
             Console.WriteLine("Today is now {0} in your {1} week of your {2} year.", day, FormatNumber(weekCount), FormatNumber(yearCount));
 
+        }
+
+        private static void WritePlayerStatus()
+        {
+            Console.WriteLine("Health : {0}", player.Health);
+            Console.WriteLine("Creativity : {0}", player.Creativity);
+            Console.WriteLine("Happiness : {0}", player.Happiness);
+            Console.WriteLine("Alertness : {0}", player.Alertness);
         }
 
         private static Day AdvanceNextDay()
