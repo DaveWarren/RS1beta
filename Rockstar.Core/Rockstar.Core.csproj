@@ -39,8 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IntExtensions.cs" />
+    <Compile Include="Game\ITimeManager.cs" />
+    <Compile Include="Game\TimeManager.cs" />
+    <Compile Include="Utilities\IntExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RockstarGame\Rockstar.Components.csproj">
+      <Project>{3B31DE5A-1EA4-435B-9C31-A3136FB58D11}</Project>
+      <Name>Rockstar.Components</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

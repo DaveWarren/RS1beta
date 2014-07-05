@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Rockstar.Core
+namespace Rockstar.Core.Utilities
 {
     public static class IntExtensions
     {
@@ -29,6 +25,9 @@ namespace Rockstar.Core
                         break;
                     case 3:
                         suffix = "rd";
+                        break;
+                    default :
+                        suffix = "th";
                         break;
                 }
             }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RS1beta
+﻿namespace Rockstar.Components
 {
     public enum Day
     {

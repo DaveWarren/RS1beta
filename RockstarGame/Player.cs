@@ -19,5 +19,15 @@
         public double Creativity { get; set; }
         public double Happiness { get; set; }
         public double Alertness { get; set; }
+
+        public string GetStatus()
+        {
+            var status = string.Format("Health : {0}\n", this.Health);
+            status += string.Format("Creativity : {0}\n", this.Creativity);
+            status += string.Format("Happiness : {0}\n", this.Happiness);
+            status += string.Format("Alertness : {0}\n", this.Alertness);
+
+            return status;
+        }
     }
 }
