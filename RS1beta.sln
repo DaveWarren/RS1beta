@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RS1beta", "RS1beta\RS1beta.csproj", "{2ADC42B0-1363-4311-8ACF-5D733CA27556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockstarGame", "RockstarGame\RockstarGame.csproj", "{3B31DE5A-1EA4-435B-9C31-A3136FB58D11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rockstar.Components", "RockstarGame\Rockstar.Components.csproj", "{3B31DE5A-1EA4-435B-9C31-A3136FB58D11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rockstar.Core", "Rockstar.Core\Rockstar.Core.csproj", "{FA08CFE8-C82C-4966-AECA-972BDB7DCDF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,10 @@ Global
 		{3B31DE5A-1EA4-435B-9C31-A3136FB58D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B31DE5A-1EA4-435B-9C31-A3136FB58D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B31DE5A-1EA4-435B-9C31-A3136FB58D11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA08CFE8-C82C-4966-AECA-972BDB7DCDF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA08CFE8-C82C-4966-AECA-972BDB7DCDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA08CFE8-C82C-4966-AECA-972BDB7DCDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA08CFE8-C82C-4966-AECA-972BDB7DCDF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
