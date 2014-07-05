@@ -39,7 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game\ITimeManager.cs" />
+    <Compile Include="Game\GameManager.cs" />
+    <Compile Include="Game\Interfaces\IGameManager.cs" />
+    <Compile Include="Game\Interfaces\IPlayerManager.cs" />
+    <Compile Include="Game\Interfaces\ITimeManager.cs" />
+    <Compile Include="Game\PlayerManager.cs" />
     <Compile Include="Game\TimeManager.cs" />
     <Compile Include="Utilities\IntExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

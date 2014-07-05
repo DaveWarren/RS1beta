@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Ninject.Modules;
 using Rockstar.Core.Game;
+using Rockstar.Core.Game.Interfaces;
 
 namespace RS1beta
 {
@@ -13,6 +14,8 @@ namespace RS1beta
         public override void Load()
         {
             Bind<ITimeManager>().To<TimeManager>();
+            Bind<IPlayerManager>().To<PlayerManager>();
+            Bind<IGameManager>().To<GameManager>();
         }
     }
 }

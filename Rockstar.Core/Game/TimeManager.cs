@@ -1,10 +1,11 @@
 ﻿using Rockstar.Components;
+using Rockstar.Core.Game.Interfaces;
 
 namespace Rockstar.Core.Game
 {
     public class TimeManager : ITimeManager
     {
-        public Today AdvanceTime(Today today)
+        public Today AdvanceDay(Today today)
         {
             if (today.CurrentDay == Day.Sunday)
             {

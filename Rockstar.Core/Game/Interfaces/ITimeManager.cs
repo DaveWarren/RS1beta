@@ -1,11 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Rockstar.Components;
+﻿using Rockstar.Components;
 
-
-namespace Rockstar.Core.Game
+namespace Rockstar.Core.Game.Interfaces
 {
     public interface ITimeManager
     {
@@ -14,7 +9,7 @@ namespace Rockstar.Core.Game
         /// Advance to the next day.
         /// </summary>
         /// <returns>The the day advanced to.</returns>
-        Today AdvanceTime(Today today);
+        Today AdvanceDay(Today today);
 
         Today InitializeGame();
 

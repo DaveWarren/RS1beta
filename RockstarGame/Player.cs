@@ -1,33 +1,33 @@
-﻿namespace RockstarGame
+﻿namespace Rockstar.Components
 {
     public class Player
     {
         public Player()
         {
-            this.Health = 100;
-            this.Creativity = 100;
-            this.Happiness = 100;
-            this.Alertness = 100;
+            this.Health = new PlayerAttribute(0, 100, 75);
+            this.Creativity = new PlayerAttribute(0, 100, 75);
+            this.Happiness = new PlayerAttribute(0, 100, 75);
+            this.Alertness = new PlayerAttribute(0, 100, 75);
         }
 
         public bool NotDead()
         {
-            return true;
+            return Health.CurrentValue > 0;
         }
 
-        public double Health { get; set; }
-        public double Creativity { get; set; }
-        public double Happiness { get; set; }
-        public double Alertness { get; set; }
+        public PlayerAttribute Health { get; set; }
+        public PlayerAttribute Creativity { get; set; }
+        public PlayerAttribute Happiness { get; set; }
+        public PlayerAttribute Alertness { get; set; }
 
-        public string GetStatus()
+        public string Name { get; set; }
+
+        public void Laze()
         {
-            var status = string.Format("Health : {0}\n", this.Health);
-            status += string.Format("Creativity : {0}\n", this.Creativity);
-            status += string.Format("Happiness : {0}\n", this.Happiness);
-            status += string.Format("Alertness : {0}\n", this.Alertness);
-
-            return status;
+            //Decrement Creativity
+            Creativity.DecrementValue();
+            Happiness.IncrementValue(3);
+            
         }
     }
 }
