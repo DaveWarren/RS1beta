@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game\GameManager.cs" />
-    <Compile Include="Game\Interfaces\IGameManager.cs" />
+    <Compile Include="Game\GameEngine.cs" />
+    <Compile Include="Game\Interfaces\IGameEngine.cs" />
     <Compile Include="Game\Interfaces\IPlayerManager.cs" />
     <Compile Include="Game\Interfaces\ITimeManager.cs" />
     <Compile Include="Game\PlayerManager.cs" />

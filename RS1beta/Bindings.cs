@@ -15,7 +15,7 @@ namespace RS1beta
         {
             Bind<ITimeManager>().To<TimeManager>();
             Bind<IPlayerManager>().To<PlayerManager>();
-            Bind<IGameManager>().To<GameManager>();
+            Bind<IGameEngine>().To<GameEngine>().InSingletonScope();
         }
     }
 }

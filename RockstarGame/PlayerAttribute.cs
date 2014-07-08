@@ -35,11 +35,11 @@ namespace Rockstar.Components
         {
             for (int i = 0; i < amount; i++)
             {
-                CurrentValue--;
-                if (CurrentValue == _minValue)
+                
+                if (CurrentValue > _minValue)
                 {
-                    // Attribute depleted Raise event
-                    
+                    CurrentValue--;
+                    // Attribute depleted Raise event                    
                 }
             }
         }

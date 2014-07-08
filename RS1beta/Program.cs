@@ -15,15 +15,13 @@ namespace RS1beta
 
         private static ITimeManager _timeManager;
         private static IPlayerManager _playerManager;
-        private static IGameManager _gameManager;
+        private static IGameEngine _gameEngine;
 
         internal static void Init()
         {
             IKernel kernel = new StandardKernel();
             kernel.Load(Assembly.GetExecutingAssembly());
-            _timeManager = kernel.Get<ITimeManager>();
-            _playerManager = kernel.Get<IPlayerManager>();
-            _gameManager = kernel.Get<IGameManager>();
+            _gameEngine = kernel.Get<IGameEngine>();
         }
 
         static int Main(string[] args)
@@ -31,7 +29,7 @@ namespace RS1beta
             Init();
 
             _player = new Player();
-            _currentDay = _timeManager.InitializeGame();
+            _currentDay = _gameEngine.InitializeGame(_player);
 
             Console.WriteLine("Simulator");
             Console.WriteLine("Enter your band name");
@@ -53,12 +51,8 @@ namespace RS1beta
                     
                     //laze around
                     case "l":
-                        var timeToLaze = _gameManager.LazeAroundTime();
-                        for (int i = 0; i < timeToLaze; i++)
-                        {
-                            _player.Laze();
-                        }
-
+                        _gameEngine.LazeAround();
+                        
                         WritePlayerStatus();
                         break;
                 }
@@ -80,7 +74,7 @@ namespace RS1beta
             // world events
 
             // advance day by 1.
-            _currentDay = _timeManager.AdvanceDay(_currentDay);
+            _currentDay = _timeManager.AdvanceDay(_gameEngine.GetCurrentDay());
 
             // output new day
             Console.WriteLine("Today is now {0} in your {1} week of your {2} year.", _currentDay.CurrentDay, _currentDay.Weeks.ToOrdinal(), _currentDay.Years.ToOrdinal());

@@ -11,8 +11,6 @@ namespace Rockstar.Core.Game.Interfaces
         /// <returns>The the day advanced to.</returns>
         Today AdvanceDay(Today today);
 
-        Today InitializeGame();
-
 
     }
 }

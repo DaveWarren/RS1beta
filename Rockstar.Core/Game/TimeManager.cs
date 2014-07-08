@@ -25,10 +25,6 @@ namespace Rockstar.Core.Game
             return today;
         }
 
-        public Today InitializeGame()
-        {
-            return new Today(1, 1, 1, Day.Monday);
-        }
 
         private Day GetNextDay(Today today)
         {
